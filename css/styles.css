@@ -1,0 +1,117 @@
+body{
+    margin:0;
+    height: 2000px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+.contenedor-flex{
+    display: flex;
+}
+
+.portada{
+    background-image: url(../img/964111.png);
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    background-attachment: fixed ;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.nav-bar{
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.menu-navbar{
+    justify-content: space-between;
+    margin-right: 80px;
+    
+}
+
+.logo{
+    margin: 0 35px;
+    font-size: 33px;
+    color: white;
+
+}
+
+.nav-bar{
+    justify-content: space-between;        
+  
+}
+.menu{
+    justify-content: space-between;
+    
+    min-width: 40%;
+    margin: auto 200px;
+}
+
+.menu li a{
+    color:white;
+}
+
+.contenedor-sub-menu{
+    position: relative;
+}
+
+.contenedor-sub-menu:hover .sub-menu li {
+   height: 20px;
+    opacity: 1;
+  
+}
+
+.sub-menu{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+   
+}
+
+.sub-menu li{
+    color: white; 
+       text-align: center;
+    background-color:black;
+    height: 0;
+    overflow: hidden;
+         transition: all .5s ease;
+}
+  
+.personajes{
+    background-color: #1c0b0c;
+    color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: double #ccbe6d 6px;
+    
+
+}
+.personaje{
+    border: double #ccbe6d 6px;
+    width: 26%;
+    text-align: center;
+    margin-top: 90px;
+}
+.personaje img{
+    width: 300px;
+    margin: 0px;
+    height: 300px;
+    padding-top: 10px;
+
+}
+.personaje p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
