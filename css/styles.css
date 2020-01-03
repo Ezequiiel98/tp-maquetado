@@ -1,0 +1,19 @@
+.titulo-pelicula{
+    text-align: center;
+}
+.cabecera-pelicula{
+    flex-wrap: wrap;
+}
+.contenedor-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.descripcion-pelicula{
+   max-width: 70%;
+    margin-left: 20px
+}
+.trailer-pelicula{
+    margin-top: 20px;
+    justify-self: center;
+
+}
