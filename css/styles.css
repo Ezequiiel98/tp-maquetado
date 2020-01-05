@@ -30,7 +30,6 @@ li {
 .contenedor-flex {
     display: flex;
 }
-
 /* Nav bar header */
 
 .nav-bar {
@@ -98,6 +97,76 @@ li {
     transition: all .5s ease;
 }
 
+
+/* nav agus */
+.nav-bar{
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d0b0c;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+.menu-navbar{
+    justify-content: space-between;
+    margin-right: 80px;
+    
+}
+
+.logo{
+    margin: 0 35px;
+    font-size: 33px;
+    color: #ccbe6d;
+    font-family: 'Eater', cursive;
+}
+
+.nav-bar{
+    justify-content: space-between;        
+  
+}
+.menu{
+    justify-content: space-between;
+    
+    min-width: 40%;
+    margin: auto 200px;
+}
+
+.menu li a{
+    color:#ccbe6d ;
+}
+.nav-bar a:hover{
+        background: #ccbe6d;
+        color: black;
+        padding: 14px 16px;
+}
+
+
+.contenedor-sub-menu{
+    position: relative;
+}
+
+.contenedor-sub-menu:hover .sub-menu li {
+   height: 20px;
+    opacity: 1;
+  
+}
+
+.sub-menu{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+   
+}
+
+.sub-menu li{
+    color: white; 
+       text-align: center;
+    background-color:black;
+    height: 0;
+    overflow: hidden;
+         transition: all .5s ease;
+}
 /* CARROUSEL  */
 .carrousel {
     height: 95vh;
