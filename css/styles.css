@@ -1,22 +1,32 @@
- 
- .titulo-pelicula{
-    text-align: center;
-}
-.cabecera-pelicula{
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-.contenedor-flex{
-    display: flex;
-    justify-content: space-between;
-}
-.descripcion-pelicula{
-   max-width: 75%;
-    margin-left: 20px;
-    
-}
-.trailer-pelicula{
-    margin-top: 50px;
-    margin-left: 370px;
+ img {
+     max-width: 100%;
+ }
 
+ .titulo-pelicula {
+     text-align: center;
+ }
+
+ .cabecera-pelicula {
+     flex-wrap: wrap;
+     margin-bottom: 50px;
+ }
+
+ .contenedor-flex {
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+ }
+
+ .descripcion-pelicula {
+     max-width: 75%;
+     margin-left: 20px;
+
+ }
+.imagen-pelicula{
+    max-height: 300px;
 }
+ .trailer-pelicula {
+     margin-top: 50px;
+/*      margin-left: 370px;
+ */
+ }
