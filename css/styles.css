@@ -125,6 +125,7 @@ li {
     color: white;
     font-size: 200px;
     cursor: pointer;
+   padding: 30px;
 }
 
 
@@ -137,21 +138,22 @@ li {
 .carrousel-img-sig {
     width: 0;
     height: 0;
-    border-right: 50px solid transparent;
-    border-top: 50px solid transparent;
-    border-left: 50px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 50px solid rgba(255, 255, 255, 0.3);
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 20px solid rgba(255, 255, 255, 0.3);
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
+  
 }
 
 .carrousel-img-ant:hover,
 .carrousel-img-sig:hover {
-    border-left-color: rgba(255, 255, 255, 0.774);
-    border-bottom-color: rgba(255, 255, 255, 0.774);
+    border-left-color: rgba(255, 255, 255, 1);
+    border-bottom-color: rgba(255, 255, 255, 1);
 }
 
 /* acomodo los triangulos de sig y anterior del carrusel */
