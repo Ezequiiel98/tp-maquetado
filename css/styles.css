@@ -407,15 +407,16 @@ h2 {
     }
 
     .descripcion-seccion {
-           width: 65%;
+        width: 65%;
     }
+
     #seccion-libros {
-          flex-direction: row-reverse;
+        flex-direction: row-reverse;
     }
 }
 
 .descripcion-seccion {
-   
+
     border: 3px double #ccbe6d;
     padding: 20px;
     display: flex;
@@ -462,4 +463,3 @@ h2 {
     background-color: #ccbe6d;
     color: black;
 }
-
