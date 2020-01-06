@@ -109,6 +109,7 @@ h2 {
 
 
     }
+    
 }
 
 .menu li {
@@ -202,15 +203,29 @@ h2 {
     padding: 20px;
 }
 
-@media screen  and (min-width: 480px){
+
+@media screen  and (max-width: 480px){
     .personaje{
-        width: 46%;
+        width: 80%;
+    }
+    .libro{
+        width: 80% !important;
+    }
+    .libro h2{
+       font-size: 16px;
     }
 }
 
 @media screen  and (min-width: 768px){
     .personaje{
         width: 26%;
+    }
+    .libro{
+        width: 26%;
+    }
+    .libro h2{
+        font-size: 50px;
+        margin-top: 80px;
     }
 }
 .personaje img {
@@ -249,7 +264,6 @@ h2 {
 }
 
 .libro h2 {
-    font-size: 50px;
     text-align: center;
     text-shadow: 4px 8px black;
     color: #ccbe6d;
