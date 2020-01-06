@@ -551,3 +551,112 @@ h2 {
     border-style: double;
 
 }
+
+/* PERSONAJES */
+.personajes {
+    background-color: #0f0607;
+    color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: double #ccbe6d 6px;
+
+}
+
+.personaje {
+    border: double #ccbe6d 6px;
+    width: 100%;
+    text-align: center;
+    margin-top: 90px;
+    background-color: #240c0d;
+    padding: 20px;
+}
+
+@media screen  and (min-width: 480px){
+    .personaje{
+        width: 46%;
+    }
+}
+
+@media screen  and (min-width: 768px){
+    .personaje{
+        width: 26%;
+    }
+}
+.personaje img {
+    width: 300px;
+    margin: 0px;
+    height: 300px;
+    border-radius: 8px;
+    border: solid 2px;
+
+}
+
+.personaje p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* LIBROS */
+.libros {
+    background-color: #0f0607;
+    color: wheat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: double #ccbe6d 6px;
+
+
+}
+
+.libro {
+    border: double 4px;
+    width: 55%;
+    padding: 80px;
+    background-color: #240c0d;
+}
+
+.libro h2 {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 4px 8px black;
+    color: #ccbe6d;
+    font-family: 'Eater', cursive;
+
+}
+
+.libro h3 {
+    font-size: 40px;
+    padding-top: 20px;
+    text-shadow: 4px 8px black;
+}
+
+.libro p {
+    padding-bottom: 50px;
+}
+
+.botonDescarga {
+    background-color: #5c2123;
+    border-radius: 8px;
+    border: 1px solid #0f0607;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 16px 31px;
+    text-decoration: none;
+
+}
+
+.botonDescarga:hover {
+    background-color: #eea112;
+    color: black;
+}
+
+.botonDescarga:active {
+    position: relative;
+    top: 1px;
+}
