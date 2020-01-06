@@ -1,0 +1,465 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+
+}
+
+img {
+    max-width: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    font-family: 'Eater', cursive;
+}
+
+.contenedor-flex {
+    display: flex;
+}
+
+/* Nav bar header */
+
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Eater', cursive;
+
+    width: 100%;
+    z-index: 4;
+}
+
+.menu-navbar {
+    justify-content: space-between;
+    margin-right: 80px;
+
+}
+
+.contenedor-logo {
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0 35px;
+    font-size: 33px;
+    color: #ccbe6d;
+    font-family: 'Eater', cursive;
+
+}
+
+
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d0b0c;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    flex-direction: column;
+
+}
+
+.menu {
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    min-width: 45%;
+    margin: auto 200px;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .menu,
+    .nav-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-bar {
+        position: fixed;
+    }
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li a {
+    color: #ccbe6d;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.menu li a:hover {
+    background: #ccbe6d;
+    color: black;
+    padding: 5px;
+}
+
+/* SUB MENU  */
+.contenedor-sub-menu {
+    position: relative;
+}
+
+
+.contenedor-sub-menu:hover .sub-menu li {
+    height: 30px;
+    opacity: 1;
+
+}
+
+
+.sub-menu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 4;
+    top: 53px;
+    width: 500px;
+    left: -220px;
+
+}
+
+.sub-menu li {
+    color: white;
+    text-align: center;
+    background-color: #1d0b0c;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+
+
+/* CARROUSEL  */
+.carrousel {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+@media screen and (min-width:480px) {
+    .carrousel {
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .carrousel {
+        height: 100vh;
+    }
+}
+
+.carrousel-imagenes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+
+}
+
+.carrousel-img {
+    position: absolute;
+}
+
+.carrousel-anterior>label,
+.carrousel-siguiente>label {
+    position: absolute;
+    top: 20%;
+
+    font-size: 200px;
+    cursor: pointer;
+    padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .carrousel-anterior>label,
+    .carrousel-siguiente>label {
+
+        top: 40%;
+
+    }
+}
+
+.carrousel-siguiente>label {
+    right: 0;
+}
+
+/* Flechas sig y ant del carrousel */
+.carrousel-img-ant,
+.carrousel-img-sig {
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid rgba(204, 190, 109, 0.534);
+    border-bottom: 20px solid rgba(204, 190, 109, 0.534);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+
+}
+
+.carrousel-img-ant:hover,
+.carrousel-img-sig:hover {
+    border-left-color: rgba(204, 190, 109, 1);
+    border-bottom-color: rgba(204, 190, 109, 1);
+}
+
+/* acomodo los triangulos de sig y anterior del carrusel */
+.carrousel-img-ant {
+    margin-left: 25px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.carrousel-img-sig {
+    margin-right: 25px;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+}
+
+/* oculto los inputs  */
+.carrousel>input[type="radio"] {
+    display: none;
+}
+
+
+/* ~ selecciona al primer elemento hermano  */
+/* esto hace que las flechas de sig y anterior se vean o sea si el 1 input esta chekeado entonces la imagen 1 va a estar viendose y la anterior a esa seria la 5 y la siguiente seria la 2 entonces el label de la imagen 5 y la imagen 2 van a estar con opacity 1 */
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-anterior>label:nth-child(5),
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-siguiente>label:nth-child(2),
+.carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-anterior>label:nth-child(1),
+.carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-siguiente>label:nth-child(3),
+.carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-anterior>label:nth-child(2),
+.carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-siguiente>label:nth-child(4),
+.carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-anterior>label:nth-child(3),
+.carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-siguiente>label:nth-child(5),
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-anterior>label:nth-child(4),
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-siguiente>label:nth-child(1) {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* acomodo las imagenes para despues darle efectos */
+.carrousel-imagenes .carrousel-img:nth-child(1) {
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+}
+
+.carrousel-imagenes .carrousel-img:nth-child(2) {
+    transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+}
+
+.carrousel-imagenes .carrousel-img:nth-child(3) {
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+}
+
+.carrousel-imagenes .carrousel-img:nth-child(4) {
+    transform: translateY(-200px);
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
+}
+
+.carrousel-imagenes .carrousel-img:nth-child(5) {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+}
+
+
+/* pongo todas las imagenes invisibles y la transicion es para que el efecto se vea mas lindo */
+.carrousel>input[type="radio"]:checked~.carrousel-imagenes .carrousel-img {
+    opacity: 0;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+}
+
+/* :nth-child() selecciona al numero de hijo que le pongas  */
+/* cuando el primer input esta checkeado le agrego estos estilos a la 1er imagen */
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-imagenes .carrousel-img:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+.carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-imagenes .carrousel-img:nth-child(2) {
+    opacity: 1;
+    z-index: 2;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
+.carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-imagenes .carrousel-img:nth-child(3) {
+    opacity: 1;
+    z-index: 2;
+
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+.carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-imagenes .carrousel-img:nth-child(4) {
+    opacity: 1;
+    z-index: 2;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-imagenes .carrousel-img:nth-child(5) {
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+
+/* secciones */
+.contenedor-seccion {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.articulo-seccion {
+    background-color: #240c0d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .articulo-seccion {
+        flex-direction: row;
+    }
+
+    .articulo-seccion img {
+        max-width: 53%;
+    }
+
+    .descripcion-seccion {
+        width: 65%;
+    }
+
+    #seccion-libros {
+        flex-direction: row-reverse;
+    }
+}
+
+.descripcion-seccion {
+
+    border: 3px double #ccbe6d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ccbe6d;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.descripcion-seccion h1 {
+    font-size: 35px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.descripcion-seccion p {
+    font-size: 20px;
+}
+
+.descripcion-seccion a {
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    align-self: flex-end;
+    padding: 20px;
+    color: #ccbe6d;
+    background-color: transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 2px solid #ccbe6d;
+    cursor: pointer;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.descripcion-seccion a:hover {
+    background-color: #ccbe6d;
+    color: black;
+}
