@@ -162,17 +162,18 @@ h2 {
 
 }
 
-@media screen and (min-width:480px){
-    .carrousel{
-        height: 60vh;
+@media screen and (min-width:480px) {
+    .carrousel {
+        height: 70vh;
     }
 }
 
-@media screen and (min-width:768px){
-    .carrousel{
+@media screen and (min-width:768px) {
+    .carrousel {
         height: 100vh;
     }
 }
+
 .carrousel-imagenes {
     margin: 0;
     padding: 0;
@@ -389,17 +390,32 @@ h2 {
 .articulo-seccion {
     background-color: #240c0d;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     color: white;
 
 }
 
-.articulo-seccion img {
-    max-width: 53%;
+@media screen and (min-width: 768px) {
+
+    .articulo-seccion {
+        flex-direction: row;
+    }
+
+    .articulo-seccion img {
+        max-width: 53%;
+    }
+
+    .descripcion-seccion {
+           width: 65%;
+    }
+    #seccion-libros {
+          flex-direction: row-reverse;
+    }
 }
 
 .descripcion-seccion {
-    width: 65%;
+   
     border: 3px double #ccbe6d;
     padding: 20px;
     display: flex;
@@ -447,6 +463,3 @@ h2 {
     color: black;
 }
 
-#seccion-libros {
-    flex-direction: row-reverse;
-}
