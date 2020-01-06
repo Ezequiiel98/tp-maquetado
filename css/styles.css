@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -10,7 +11,7 @@ html {
 
 body {
     margin: 0;
-    height: 1000px;
+
 }
 
 img {
@@ -25,6 +26,11 @@ a {
 
 li {
     list-style: none;
+}
+
+h1,
+h2{
+    font-family: 'Eater', cursive;
 }
 
 .contenedor-flex {
@@ -166,8 +172,8 @@ li {
     height: 0;
     border-right: 20px solid transparent;
     border-top: 20px solid transparent;
-    border-left: 20px solid rgba(255, 255, 255, 0.3);
-    border-bottom: 20px solid rgba(255, 255, 255, 0.3);
+    border-left: 20px solid rgba(204, 190, 109, 0.534);
+    border-bottom: 20px solid rgba(204, 190, 109, 0.534);
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -178,8 +184,8 @@ li {
 
 .carrousel-img-ant:hover,
 .carrousel-img-sig:hover {
-    border-left-color: rgba(255, 255, 255, 1);
-    border-bottom-color: rgba(255, 255, 255, 1);
+    border-left-color: rgba(204, 190, 109, 1);
+    border-bottom-color: rgba(204, 190, 109, 1);
 }
 
 /* acomodo los triangulos de sig y anterior del carrusel */
@@ -325,4 +331,78 @@ li {
     -moz-transform: translateX(0px);
     -ms-transform: translateX(0px);
     -o-transform: translateX(0px);
+}
+
+
+/* secciones */
+.contenedor-seccion {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.articulo-seccion {
+    background-color: #240c0d;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+}
+
+.articulo-seccion img {
+    max-width: 53%;
+}
+
+.descripcion-seccion {
+    width: 65%;
+    border: 3px double #ccbe6d;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ccbe6d;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.descripcion-seccion h1 {
+    font-size: 35px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.descripcion-seccion p {
+    font-size: 20px;
+}
+
+.descripcion-seccion a {
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    align-self: flex-end;
+    padding: 20px;
+    color: #ccbe6d;
+    background-color: transparent;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 2px solid #ccbe6d;
+    cursor: pointer;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+.descripcion-seccion a:hover {
+    background-color: #ccbe6d;
+    color: black;
+}
+
+#seccion-libros {
+    flex-direction: row-reverse;
 }

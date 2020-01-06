@@ -5,77 +5,107 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Eater&display=swap" rel="stylesheet">   
+	<link href="https://fonts.googleapis.com/css?family=Eater&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-	<nav class="nav-bar contenedor-flex">
-		<div class="contenedor">
-			  <h1 class="logo">Harry Potter </h1>
-		</div>
-		<ul class="menu contenedor-flex">
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Personajes Principales</a></li>
-			<li><a href="#">Libros</a></li>
-			<li class="contenedor-sub-menu"><a href="#">Peliculas</a>
-				<ul class="sub-menu">
-					<li><a href="#">Harry potter y la piedra filosofal</a></li>
-					<li><a href="#">Harry Potter y la cámara secreta</a></li>
-					<li><a href="#">Harry Potter y el prisionero de Azkaban</a></li>
-					<li><a href="#">Harry Potter y el cáliz de fuego</a></li>
-					<li><a href="#">Harry Potter y la orden del Fénix</a></li>
-					<li><a href="#">Harry Potter y el misterio del príncipe</a></li>
-					<li><a href="#">Harry Potter y las reliquias de la muerte - Parte 1</a></li>
-					<li><a href="#">Harry Potter y las reliquias de la muerte - Parte 2</a></li>
-				</ul>        
-			</li>
-		</ul>
-		
-	</nav>
-	
-	<div class="contenedor">
-		<div class="carrousel">
-			<input type="radio" id="carrousel-img-1" name="carrousel" checked>
-			<input type="radio" id="carrousel-img-2" name="carrousel">
-			<input type="radio" id="carrousel-img-3" name="carrousel">
-			<input type="radio" id="carrousel-img-4" name="carrousel">
-			<input type="radio" id="carrousel-img-5" name="carrousel">
-			<ul class="carrousel-imagenes">
-				<li class="carrousel-img">
-					<img src="img/1.jpg" alt="">
-				</li>
-				<li class="carrousel-img">
-					<img src="img/2.jpg" alt="">
-				</li>
-				<li class="carrousel-img">
-					<img src="img/3.jpg" alt="">
-				</li>
-				<li class="carrousel-img">
-					<img src="img/4.jpg" alt="">
-				</li>
-				<li class="carrousel-img">
-					<img src="img/5.jpg" alt="">
+	<header>
+		<nav class="nav-bar contenedor-flex">
+			<div class="contenedor">
+				<h1 class="logo">Harry Potter </h1>
+			</div>
+			<ul class="menu contenedor-flex">
+				<li><a href="#inicio">Inicio</a></li>
+				<li><a href="#seccion-personajes">Personajes Principales</a></li>
+				<li><a href="#seccion-libros">Libros</a></li>
+				<li class="contenedor-sub-menu"><a href="#seccion-peliculas">Peliculas</a>
+					<!-- <ul class="sub-menu">
+						<li><a href="#">Harry potter y la piedra filosofal</a></li>
+						<li><a href="#">Harry Potter y la cámara secreta</a></li>
+						<li><a href="#">Harry Potter y el prisionero de Azkaban</a></li>
+						<li><a href="#">Harry Potter y el cáliz de fuego</a></li>
+						<li><a href="#">Harry Potter y la orden del Fénix</a></li>
+						<li><a href="#">Harry Potter y el misterio del príncipe</a></li>
+						<li><a href="#">Harry Potter y las reliquias de la muerte - Parte 1</a></li>
+						<li><a href="#">Harry Potter y las reliquias de la muerte - Parte 2</a></li>
+					</ul> -->
 				</li>
 			</ul>
-			<div class="carrousel-anterior">
-				<label for="carrousel-img-1" class="carrousel-img-ant"></label>
-				<label for="carrousel-img-2" class="carrousel-img-ant"></label>
-				<label for="carrousel-img-3" class="carrousel-img-ant"></label>
-				<label for="carrousel-img-4" class="carrousel-img-ant"></label>
-				<label for="carrousel-img-5" class="carrousel-img-ant"></label>
+
+		</nav>
+
+		<div class="contenedor-carrousel" id="inicio">
+			<div class="carrousel">
+				<input type="radio" id="carrousel-img-1" name="carrousel" checked>
+				<input type="radio" id="carrousel-img-2" name="carrousel">
+				<input type="radio" id="carrousel-img-3" name="carrousel">
+				<input type="radio" id="carrousel-img-4" name="carrousel">
+				<input type="radio" id="carrousel-img-5" name="carrousel">
+				<ul class="carrousel-imagenes">
+					<li class="carrousel-img">
+						<img src="img/1.jpg" alt="">
+					</li>
+					<li class="carrousel-img">
+						<img src="img/2.jpg" alt="">
+					</li>
+					<li class="carrousel-img">
+						<img src="img/3.jpg" alt="">
+					</li>
+					<li class="carrousel-img">
+						<img src="img/4.jpg" alt="">
+					</li>
+					<li class="carrousel-img">
+						<img src="img/5.jpg" alt="">
+					</li>
+				</ul>
+				<div class="carrousel-anterior">
+					<label for="carrousel-img-1" class="carrousel-img-ant"></label>
+					<label for="carrousel-img-2" class="carrousel-img-ant"></label>
+					<label for="carrousel-img-3" class="carrousel-img-ant"></label>
+					<label for="carrousel-img-4" class="carrousel-img-ant"></label>
+					<label for="carrousel-img-5" class="carrousel-img-ant"></label>
+				</div>
+				<div class="carrousel-siguiente">
+					<label for="carrousel-img-1" class="carrousel-img-sig"></label>
+					<label for="carrousel-img-2" class="carrousel-img-sig"></label>
+					<label for="carrousel-img-3" class="carrousel-img-sig"></label>
+					<label for="carrousel-img-4" class="carrousel-img-sig"></label>
+					<label for="carrousel-img-5" class="carrousel-img-sig"></label>
+				</div>
+
 			</div>
-			<div class="carrousel-siguiente">
-				<label for="carrousel-img-1" class="carrousel-img-sig"></label>
-				<label for="carrousel-img-2" class="carrousel-img-sig"></label>
-				<label for="carrousel-img-3" class="carrousel-img-sig"></label>
-				<label for="carrousel-img-4" class="carrousel-img-sig"></label>
-				<label for="carrousel-img-5" class="carrousel-img-sig"></label>
-			</div>
-		
 		</div>
-	</div>
+	</header>
+
+	<section class="contenedor-seccion">
+		<article class="articulo-seccion " id="seccion-personajes">
+			<div class="descripcion-seccion">
+				<h1>Personajes Principales</h1>
+				<p>En esta seccion podras encontrar informacion sobre los personajes principales de la saga.</p>
+				<a href="personajes.html"> Ver Mas</a>
+			</div>
+			<img src="img/personajes-harry.jpg" alt="">
+		</article>
+		<article class="articulo-seccion" id="seccion-libros">
+			<div class="descripcion-seccion">
+				<h1>Libros</h1>
+				<p>En esta seccion podras encontrar informacion sobre todos los libros de la saga y tambien descargarlos</p>
+				<a href="prueba.html"> Ver Mas</a>
+			</div>
+			<img src="img/libros-harry.jpg" alt="">
+		</article>
+		<article class="articulo-seccion" id="seccion-peliculas">
+			<div class="descripcion-seccion ">
+				<h1>Peliculas</h1>
+				<p>En esta seccion podras encontrar informacion sobre todas las peliculas de la saga y sus trailers</p>
+				<a href="peliculas.html"> Ver Mas</a>
+			</div>
+			<img src="img/fondo3.jpg" alt="">
+		</article>
+
+	</section>
 </body>
 
 </html>
