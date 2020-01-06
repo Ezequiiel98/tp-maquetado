@@ -103,12 +103,13 @@ h2 {
         top: 0;
 
     }
-    .nav-bar-inicio{
+
+    .nav-bar-inicio {
         position: fixed;
-       
+
 
     }
-    
+
 }
 
 .menu li {
@@ -491,7 +492,6 @@ h2 {
     color: black;
 }
 
-
 /* PELICULAS */
 .bordes {
     border-color: #ccbe6d;
@@ -570,34 +570,9 @@ h2 {
     text-align: center;
     margin-top: 90px;
     background-color: #240c0d;
-    padding: 20px;
 }
 
 
-@media screen  and (max-width: 480px){
-    .personaje{
-        width: 80%;
-    }
-    .libro{
-        width: 80% !important;
-    }
-    .libro h2{
-       font-size: 16px;
-    }
-}
-
-@media screen  and (min-width: 768px){
-    .personaje{
-        width: 26%;
-    }
-    .libro{
-        width: 26%;
-    }
-    .libro h2{
-        font-size: 50px;
-        margin-top: 80px;
-    }
-}
 .personaje img {
     width: 300px;
     margin: 0px;
@@ -626,11 +601,46 @@ h2 {
 
 }
 
+
 .libro {
     border: double 4px;
-    width: 55%;
-    padding: 80px;
+    width: 100%;
+    padding: 20px;
     background-color: #240c0d;
+}
+
+@media screen and (max-width: 480px) {
+    .personaje {
+        width: 80%;
+
+    }
+
+    .libro h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .libro {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .personaje {
+        width: 26%;
+    }
+
+    .libro {
+        width: 55%;
+        padding: 80px;
+    }
+
+    .libro h2 {
+        font-size: 50px;
+        margin-top: 80px;
+    }
 }
 
 .libro h2 {
