@@ -11,7 +11,8 @@ html {
 
 body {
     margin: 0;
-
+    padding: 0;
+    background-color: #1d0b0c;
 }
 
 img {
@@ -42,7 +43,7 @@ h2 {
 .nav-bar {
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+
     font-family: 'Eater', cursive;
 
     width: 100%;
@@ -96,7 +97,16 @@ h2 {
     }
 
     .nav-bar {
+        position: sticky;
+        margin: 0;
+        padding: 0;
+        top: 0;
+
+    }
+    .nav-bar-inicio{
         position: fixed;
+       
+
     }
 }
 
@@ -120,36 +130,52 @@ h2 {
 }
 
 /* SUB MENU  */
-.contenedor-sub-menu {
-    position: relative;
+
+
+.contenedor-sub-menu .sub-menu {
+    display: none;
 }
 
+@media screen and (min-width:768px) {
+    .contenedor-sub-menu .sub-menu {
+        display: block;
+    }
 
-.contenedor-sub-menu:hover .sub-menu li {
-    height: 30px;
-    opacity: 1;
+    .contenedor-sub-menu {
+        position: relative;
+    }
 
-}
+    .contenedor-sub-menu:hover .sub-menu li {
+        height: 50px;
+        opacity: 1;
+
+    }
 
 
-.sub-menu {
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    z-index: 4;
-    top: 53px;
-    width: 500px;
-    left: -220px;
 
-}
+    .sub-menu li {
+        color: white;
+        text-align: center;
+        background-color: #1d0b0c;
+        height: 0;
+        opacity: 0;
+        transition: all .5s ease;
+    }
 
-.sub-menu li {
-    color: white;
-    text-align: center;
-    background-color: #1d0b0c;
-    height: 0;
-    overflow: hidden;
-    transition: all .5s ease;
+
+
+    .sub-menu {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 4;
+        width: 500px;
+        left: -220px;
+
+        top: 55px;
+    }
+
+
 }
 
 
@@ -462,4 +488,66 @@ h2 {
 .descripcion-seccion a:hover {
     background-color: #ccbe6d;
     color: black;
+}
+
+
+/* PELICULAS */
+.bordes {
+    border-color: #ccbe6d;
+    border-width: 10px;
+    border-style: double;
+    margin-top: 20px;
+}
+
+
+
+.img-1 {
+    margin-top: -2px;
+}
+
+.colores {
+    background-color: #240c0d;
+    margin-top: 0;
+}
+
+
+
+.titulo-pelicula {
+    text-align: center;
+    color: white;
+}
+
+.contenedor-pelicula {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.descripcion-pelicula {
+    max-width: 75%;
+    margin-left: 20px;
+    border-color: #ccbe6d;
+    border-width: 5px;
+    border-style: double;
+    color: white;
+    padding: 10px;
+
+}
+
+.imagen-pelicula {
+    max-height: 300px;
+    border-color: #ccbe6d;
+    border-width: 5px;
+    border-style: double;
+    margin-bottom: 10px;
+}
+
+.trailer-pelicula {
+    margin-top: 50px;
+    border-color: #ccbe6d;
+    border-width: 5px;
+    border-style: double;
+
 }
