@@ -1,33 +1,63 @@
-body{
-    margin:0;
+html {
+    box-sizing: border-box;
 }
 
-a{
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    height: 1000px;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+a {
     text-decoration: none;
     color: black;
 }
 
-li{
+li {
     list-style: none;
-    font-family: 'Eater', cursive;
 }
 
-.contenedor-flex{
+.contenedor-flex {
     display: flex;
 }
 
-.portada{
-    background-image: url(../img/964111.png);
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    background-attachment: fixed ;
-    height: 100vh;
-    justify-content: center;
-    align-content: center;
+/* Nav bar header */
+
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Eater', cursive;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+.menu-navbar {
+    justify-content: space-between;
+    margin-right: 80px;
+
+}
+
+.logo {
+    margin: 0 35px;
+    font-size: 33px;
+    color: #ccbe6d;
+    font-family: 'Eater', cursive;
 }
 
 
-.nav-bar{
+.nav-bar {
     justify-content: space-between;
     align-items: center;
     background-color: #1d0b0c;
@@ -36,66 +66,62 @@ li{
 
 }
 
-.menu-navbar{
+.menu {
     justify-content: space-between;
-    margin-right: 80px;
-    
-}
 
-.logo{
-    margin: 0 35px;
-    font-size: 33px;
-    color: #ccbe6d;
-    font-family: 'Eater', cursive;
-}
-
-.nav-bar{
-    justify-content: space-between;        
-  
-}
-.menu{
-    justify-content: space-between;
-    
-    min-width: 40%;
+    min-width: 45%;
     margin: auto 200px;
 }
 
-.menu li a{
-    color:#ccbe6d ;
-}
-.nav-bar a:hover{
-        background: #ccbe6d;
-        color: black;
-        padding: 14px 16px;
+
+.menu li a {
+    color: #ccbe6d;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
 }
 
+.menu li a:hover {
+    background: #ccbe6d;
+    color: black;
+    padding: 5px;
+}
 
-.contenedor-sub-menu{
+/* SUB MENU  */
+.contenedor-sub-menu {
     position: relative;
 }
 
+
 .contenedor-sub-menu:hover .sub-menu li {
-   height: 20px;
+    height: 30px;
     opacity: 1;
-  
+
 }
 
-.sub-menu{
+
+.sub-menu {
     padding: 0;
     margin: 0;
     position: absolute;
-   
+    z-index: 4;
+    top: 53px;
+    width: 500px;
+    left: -220px;
+
 }
 
-.sub-menu li{
-    color: white; 
-       text-align: center;
-    background-color:black;
+.sub-menu li {
+    color: white;
+    text-align: center;
+    background-color: #1d0b0c;
     height: 0;
     overflow: hidden;
-         transition: all .5s ease;
+    transition: all .5s ease;
 }
-  
+/* PERSONAJES */
 .personajes{
     background-color: #0f0607;
     color: wheat;
