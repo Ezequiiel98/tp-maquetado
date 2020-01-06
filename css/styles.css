@@ -29,7 +29,7 @@ li {
 }
 
 h1,
-h2{
+h2 {
     font-family: 'Eater', cursive;
 }
 
@@ -44,7 +44,7 @@ h2{
     align-items: center;
     background-color: rgb(0, 0, 0);
     font-family: 'Eater', cursive;
-    position: fixed;
+
     width: 100%;
     z-index: 4;
 }
@@ -55,11 +55,16 @@ h2{
 
 }
 
+.contenedor-logo {
+    margin: 0 auto;
+}
+
 .logo {
     margin: 0 35px;
     font-size: 33px;
     color: #ccbe6d;
     font-family: 'Eater', cursive;
+
 }
 
 
@@ -69,16 +74,35 @@ h2{
     background-color: #1d0b0c;
     padding-top: 7px;
     padding-bottom: 7px;
+    flex-direction: column;
 
 }
 
 .menu {
     justify-content: space-between;
-
+    flex-direction: column;
+    text-align: center;
     min-width: 45%;
     margin: auto 200px;
+
 }
 
+@media screen and (min-width: 768px) {
+
+    .menu,
+    .nav-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-bar {
+        position: fixed;
+    }
+}
+
+.menu li {
+    padding: 10px;
+}
 
 .menu li a {
     color: #ccbe6d;
@@ -132,12 +156,23 @@ h2{
 
 /* CARROUSEL  */
 .carrousel {
-    height: 100vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
 
 }
 
+@media screen and (min-width:480px){
+    .carrousel{
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width:768px){
+    .carrousel{
+        height: 100vh;
+    }
+}
 .carrousel-imagenes {
     margin: 0;
     padding: 0;
@@ -153,13 +188,22 @@ h2{
 .carrousel-anterior>label,
 .carrousel-siguiente>label {
     position: absolute;
-    top: 40%;
-    color: white;
+    top: 20%;
+
     font-size: 200px;
     cursor: pointer;
     padding: 30px;
 }
 
+@media screen and (min-width: 768px) {
+
+    .carrousel-anterior>label,
+    .carrousel-siguiente>label {
+
+        top: 40%;
+
+    }
+}
 
 .carrousel-siguiente>label {
     right: 0;
