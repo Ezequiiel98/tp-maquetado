@@ -13,11 +13,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1d0b0c;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
 
+}
+
+p {
+    font-size: 27px;
 }
 
 a {
@@ -32,6 +37,7 @@ li {
 h1,
 h2 {
     font-family: 'Eater', cursive;
+
 }
 
 .contenedor-flex {
@@ -114,6 +120,7 @@ h2 {
 
 .menu li {
     padding: 10px;
+
 }
 
 .menu li a {
@@ -129,6 +136,10 @@ h2 {
     background: #ccbe6d;
     color: black;
     padding: 5px;
+}
+
+.menu .nav-bar-activo {
+    border-bottom: 3px solid #ccbe6d;
 }
 
 /* SUB MENU  */
@@ -221,7 +232,7 @@ h2 {
 
     font-size: 200px;
     cursor: pointer;
-    padding: 30px;
+    padding: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -229,7 +240,7 @@ h2 {
     .carrousel-anterior>label,
     .carrousel-siguiente>label {
 
-        top: 40%;
+        top: 45%;
 
     }
 }
@@ -243,10 +254,10 @@ h2 {
 .carrousel-img-sig {
     width: 0;
     height: 0;
-    border-right: 20px solid transparent;
-    border-top: 20px solid transparent;
-    border-left: 20px solid rgba(204, 190, 109, 0.534);
-    border-bottom: 20px solid rgba(204, 190, 109, 0.534);
+    border-right: 15px solid transparent;
+    border-top: 15px solid transparent;
+    border-left: 15px solid rgba(204, 190, 109, 0.534);
+    border-bottom: 15px solid rgba(204, 190, 109, 0.534);
     transition: all .5s ease;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -287,8 +298,8 @@ h2 {
 
 
 /* ~ selecciona al primer elemento hermano  */
-/* esto hace que las flechas de sig y anterior se vean o sea si el 1 input esta chekeado entonces la imagen 1 va a estar viendose y la anterior a esa seria la 5 y la siguiente seria la 2 entonces el label de la imagen 5 y la imagen 2 van a estar con opacity 1 */
-.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-anterior>label:nth-child(5),
+/* esto hace que las flechas de sig y anterior se vean o sea si el 1 input esta chekeado entonces la imagen 1 va a estar viendose y la anterior a esa seria la 8 y la siguiente seria la 2 entonces el label de la imagen 5 y la imagen 2 van a estar con opacity 1 */
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-anterior>label:nth-child(8),
 .carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-siguiente>label:nth-child(2),
 .carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-anterior>label:nth-child(1),
 .carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-siguiente>label:nth-child(3),
@@ -297,65 +308,35 @@ h2 {
 .carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-anterior>label:nth-child(3),
 .carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-siguiente>label:nth-child(5),
 .carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-anterior>label:nth-child(4),
-.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-siguiente>label:nth-child(1) {
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-siguiente>label:nth-child(6),
+.carrousel>input[type="radio"]:nth-child(6):checked~.carrousel-anterior>label:nth-child(5),
+.carrousel>input[type="radio"]:nth-child(6):checked~.carrousel-siguiente>label:nth-child(7),
+.carrousel>input[type="radio"]:nth-child(7):checked~.carrousel-anterior>label:nth-child(6),
+.carrousel>input[type="radio"]:nth-child(7):checked~.carrousel-siguiente>label:nth-child(8),
+.carrousel>input[type="radio"]:nth-child(8):checked~.carrousel-anterior>label:nth-child(7),
+.carrousel>input[type="radio"]:nth-child(8):checked~.carrousel-siguiente>label:nth-child(1) {
     opacity: 1;
     z-index: 2;
 }
 
-/* acomodo las imagenes para despues darle efectos */
-.carrousel-imagenes .carrousel-img:nth-child(1) {
-    transform: translateX(-200px);
-    -webkit-transform: translateX(-200px);
-    -moz-transform: translateX(-200px);
-    -ms-transform: translateX(-200px);
-    -o-transform: translateX(-200px);
-}
-
-.carrousel-imagenes .carrousel-img:nth-child(2) {
-    transform: translateY(200px);
-    -webkit-transform: translateY(200px);
-    -moz-transform: translateY(200px);
-    -ms-transform: translateY(200px);
-    -o-transform: translateY(200px);
-}
-
-.carrousel-imagenes .carrousel-img:nth-child(3) {
-    transform: translateX(-200px);
-    -webkit-transform: translateX(-200px);
-    -moz-transform: translateX(-200px);
-    -ms-transform: translateX(-200px);
-    -o-transform: translateX(-200px);
-}
-
-.carrousel-imagenes .carrousel-img:nth-child(4) {
-    transform: translateY(-200px);
-    -webkit-transform: translateY(-200px);
-    -moz-transform: translateY(-200px);
-    -ms-transform: translateY(-200px);
-    -o-transform: translateY(-200px);
-}
-
-.carrousel-imagenes .carrousel-img:nth-child(5) {
-    transform: translateX(200px);
-    -webkit-transform: translateX(200px);
-    -moz-transform: translateX(200px);
-    -ms-transform: translateX(200px);
-    -o-transform: translateX(200px);
-}
 
 
 /* pongo todas las imagenes invisibles y la transicion es para que el efecto se vea mas lindo */
 .carrousel>input[type="radio"]:checked~.carrousel-imagenes .carrousel-img {
     opacity: 0;
-    transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -ms-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
+    transition: all .6s ease-in;
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -ms-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
 }
+
 
 /* :nth-child() selecciona al numero de hijo que le pongas  */
 /* cuando el primer input esta checkeado le agrego estos estilos a la 1er imagen */
+
+/*  Cuando el checkbox 1 este chekeado */
+/* Imagen Actual  */
 .carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-imagenes .carrousel-img:nth-child(1) {
     opacity: 1;
     transform: translateX(0px);
@@ -365,9 +346,30 @@ h2 {
     -o-transform: translateX(0px);
 }
 
+/* Imagen siguiente  */
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-imagenes .carrousel-img:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(1):checked~.carrousel-imagenes .carrousel-img:nth-child(8) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 2 este chekeado */
+/* Imagen Actual  */
 .carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-imagenes .carrousel-img:nth-child(2) {
     opacity: 1;
-    z-index: 2;
     transform: translateY(0px);
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
@@ -375,10 +377,30 @@ h2 {
     -o-transform: translateY(0px);
 }
 
+/* Imagen siguiente*/
+.carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-imagenes .carrousel-img:nth-child(3) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen anterior */
+.carrousel>input[type="radio"]:nth-child(2):checked~.carrousel-imagenes .carrousel-img:nth-child(1) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 3 este chekeado */
+/* Imagen Actual  */
 .carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-imagenes .carrousel-img:nth-child(3) {
     opacity: 1;
-    z-index: 2;
-
     transform: translateX(0px);
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -386,9 +408,30 @@ h2 {
     -o-transform: translateX(0px);
 }
 
+/* Imagen siguiente  */
+.carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-imagenes .carrousel-img:nth-child(4) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(3):checked~.carrousel-imagenes .carrousel-img:nth-child(2) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 4 este chekeado */
+/* Imagen Actual  */
 .carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-imagenes .carrousel-img:nth-child(4) {
     opacity: 1;
-    z-index: 2;
     transform: translateY(0px);
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
@@ -396,9 +439,30 @@ h2 {
     -o-transform: translateY(0px);
 }
 
+/* Imagen Siguiente */
+.carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-imagenes .carrousel-img:nth-child(5) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(4):checked~.carrousel-imagenes .carrousel-img:nth-child(3) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 5 este chekeado */
+/* Imagen Actual  */
 .carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-imagenes .carrousel-img:nth-child(5) {
     opacity: 1;
-    z-index: 2;
     transform: translateX(0px);
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -406,8 +470,119 @@ h2 {
     -o-transform: translateX(0px);
 }
 
+/* Imagen Siguiente */
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-imagenes .carrousel-img:nth-child(6) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
 
-/* secciones */
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(5):checked~.carrousel-imagenes .carrousel-img:nth-child(4) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 6 este chekeado */
+/* Imagen Actual  */
+.carrousel>input[type="radio"]:nth-child(6):checked~.carrousel-imagenes .carrousel-img:nth-child(6) {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+/* Imagen Siguiente */
+.carrousel>input[type="radio"]:nth-child(6):checked~.carrousel-imagenes .carrousel-img:nth-child(7) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(6):checked~.carrousel-imagenes .carrousel-img:nth-child(5) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 7 este chekeado */
+/* Imagen Actual  */
+.carrousel>input[type="radio"]:nth-child(7):checked~.carrousel-imagenes .carrousel-img:nth-child(7) {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+/* Imagen Siguiente */
+.carrousel>input[type="radio"]:nth-child(7):checked~.carrousel-imagenes .carrousel-img:nth-child(8) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(7):checked~.carrousel-imagenes .carrousel-img:nth-child(6) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+
+/*  Cuando el checkbox 8 este chekeado */
+/* Imagen Actual  */
+.carrousel>input[type="radio"]:nth-child(8):checked~.carrousel-imagenes .carrousel-img:nth-child(8) {
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+/* Imagen Siguiente */
+.carrousel>input[type="radio"]:nth-child(8):checked~.carrousel-imagenes .carrousel-img:nth-child(1) {
+    opacity: 0;
+    transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+}
+
+/* Imagen Anterior */
+.carrousel>input[type="radio"]:nth-child(8):checked~.carrousel-imagenes .carrousel-img:nth-child(7) {
+    opacity: 0;
+    transform: translateX(400px);
+    -webkit-transform: translateX(400px);
+    -moz-transform: translateX(400px);
+    -ms-transform: translateX(400px);
+    -o-transform: translateX(400px);
+}
+/* SECCIONES DESCRIPCION INICIO */
 .contenedor-seccion {
     margin: 0;
     padding: 0;
@@ -431,11 +606,11 @@ h2 {
     }
 
     .articulo-seccion img {
-        max-width: 53%;
+        min-width: 50%;
     }
 
     .descripcion-seccion {
-        width: 65%;
+        min-width: 50%;
     }
 
     #seccion-libros {
@@ -445,7 +620,7 @@ h2 {
 
 .descripcion-seccion {
 
-    border: 3px double #ccbe6d;
+    border: 6px double #ccbe6d;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -471,6 +646,7 @@ h2 {
     text-align: center;
     align-self: flex-end;
     padding: 20px;
+    margin-top: 29px;
     color: #ccbe6d;
     background-color: transparent;
     border-radius: 15px;
@@ -652,7 +828,7 @@ h2 {
 }
 
 .libro h3 {
-    font-size: 40px;
+    font-size: 45px;
     padding-top: 20px;
     text-shadow: 4px 8px black;
 }
